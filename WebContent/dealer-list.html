@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js ie6 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js ie7 lt-ie8 lt-ie9"> <![endif]-->
+<!--[if IE 8]> <html class="no-js ie8 lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Mobile - Dealer List</title>
+	<meta name="description" content="Automarket">
+
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/uniform.default.css">
+	<link rel="stylesheet" href="css/prettyPhoto.css">
+	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+	<script src="js/vendor/jquery-1.8.2.min.js"></script>
+	<script src="js/vendor/selectivizr.js"></script>
+	<script src="js/vendor/PIE.js"></script>
+	<script src="js/plugins/jquery.placeholder.min.js"></script>
+	<script src="js/plugins/jquery.uniform.min.js"></script>
+	<script src="js/plugins/jquery.flexslider-min.js"></script>
+	<script src="js/plugins/jquery.carouFredSel-6.1.0-packed.js"></script>
+	<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+	<script src="js/plugins/jquery.prettyPhoto.js"></script>
+	<script src="js/plugins/jquery.countdown.js"></script>
+	
+	<script src="js/plugins.js"></script>
+	<script src="js/main.js"></script>
+</head>
+<body>
+<!--[if lt IE 7]>
+<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+<![endif]-->
+<header>
+	<div class="content-holder">
+		<div class="layer-one">
+			<div class="sub-title">
+				<h1><a href="index.html">Mobile</a></h1>
+				<p class="sub-title">Car marketplace</p>
+			</div>
+				
+			<div class="dealer-login">
+				<a href="dealer-details.html" class="dealer-name">Dealer Name</a>
+				<a href="#" class="sign-out">Sign Out</a>
+			</div>
+				
+			<div class="header-buttons">
+				<a href="./Register" class="add-an-offer rounded-link-box"><span class="box-content"><strong class="plus-sign">+</strong>&nbsp;Add An Offer</span></a>
+				
+			</div>
+		</div><!--.layer-one-->
+			
+		<div class="layer-two">
+			<nav>
+				<ul>
+					<li class="nav-cars current-item"><a href="car-list.html">Cars</a></li>
+					<li class="nav-bike"><a href="#">Bikes</a></li>
+					<li class="nav-truck"><a href="#">Trucks</a></li>
+					<li class="nav-parts"><a href="#">Parts</a></li>
+				</ul>
+			</nav>
+				
+			<form id="header-search" action="car-list.html" method="post">
+				<input type="text" name="quick_search" onfocus="if(this.value == 'Quick Search, Ex: Mercedes-Benz E220') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'Quick Search, Ex: Mercedes-Benz E220'; }" value="Quick Search, Ex: Mercedes-Benz E220" class="quick-search" >
+				<select name="type-option">
+					<option value="cars" selected="selected">Cars</option>
+					<option value="bikes">Bikes</option>
+					<option value="trucks">Trucks</option>
+					<option value="Parts">Parts</option>
+				</select>
+				<div class="search-submit">
+					<input type="submit" value="Search"/>
+				</div>
+			</form>
+		</div><!--.layer-two-->
+	</div>
+</header>
+
+<div id="page-content">
+
+	<section id="car-pagination">
+		<div class="content-holder">
+			<div class="page-main-heading extra-space">
+				<div class="heading-location">
+					<h2><span class="bold">Dealers</span> ( 2.100 results )</h2>
+					<p class="page-location">
+						<a href="#">Home </a>
+						<span class="greater-than">&gt;&gt;</span>
+						<a href="#">Dealers</a>
+					</p>
+				</div>
+			
+			</div>
+			
+			<nav class="default-tabs split-tabs">
+				<ul>
+					<li class="current-item"><a href="#">Search vehicles from dealers</a></li>
+				</ul>
+			</nav>
+		</div>
+	</section><!--#car-pagination -->
+		
+	<section id="search-list">
+		<div class="content-holder">
+			<div class="full-width">
+			
+				<div class="one-half col-241 search-area">
+					<form id="search-filters">
+						<fieldset class="grey-corner-box">
+							<legend><span class="bold">Search</span></legend>
+							<ul>
+								<li>
+									<label for="dealer-name">Name:</label>
+									<input type="text" class="default-input" id="dealer-name" name="dealer_name" />
+								</li>
+								<li>
+									<div class="search-button">
+										<input type="submit" value="Search" />
+									</div>
+								</li>
+							</ul>
+							
+							<h3><span class="bold">City</span></h3>
+							<ul class="checkboxes">
+								<li><input type="checkbox" id="sofia" value="sofia" /><label for="sofia">Sofia</label></li>
+								<li><input type="checkbox" id="plovdiv" value="plovdiv" /><label for="plovdiv">Plovdiv</label></li>
+								<li><input type="checkbox" id="burgas" value="burgas" /><label for="burgas">Burgas</label></li>
+								<li><input type="checkbox" id="varna" value="varna" /><label for="varna">Varna</label></li>
+								<li><input type="checkbox" id="ruse" value="ruse" /><label for="ruse">Ruse</label></li>
+								<li><input type="checkbox" id="stara_zagora" value="stara_zagora" /><label for="stara_zagora">Stara Zagora</label></li>
+								<li><input type="checkbox" id="pleven" value="pleven" /><label for="pleven">Pleven</label></li>
+								<li><input type="checkbox" id="veliko_tarnovo" value="veliko_tarnovo" /><label for="veliko_tarnovo">Veliko Tarnovo</label></li>
+							</ul>
+						</fieldset>
+						
+					</form>
+				</div>
+				
+				<div class="one-half col-701 results-list">
+					<div class="sort-view layer-one">
+
+						<div class="pagination">
+							<a href="#" class="current-item"><span>1</span></a>
+							<a href="#"><span>2</span></a>
+							<a href="#"><span>3</span></a>
+							<span class="space-between">...</span>
+							<a href="#"><span>8</span></a>
+							<a href="#" class="next-button">Next</a>
+						</div>
+					</div>
+					
+					<div class="layer-two">
+						
+						<div id="dealer-list" class="info-list">
+							<ul class="detail-list">
+								<li>
+									<a href="dealer-details.html" class="item-link">
+										<span class="overlay">Overlay</span>
+										<img src="images/default_thumb_140_105.jpg" alt="Picture" />
+									</a>
+									<div class="text-content">
+										<div class="layer-one">
+											<h3><a href="dealer-details.html">Dealer Name Here</a></h3>
+											<span class="amount">183 Offers</span>
+										</div>
+										<ul class="item-specs layer-two">
+											<li>314 Columbus Ave, San Francisco, CA 94133</li>
+										</ul>
+										<div class="layer-three">
+											<a href="#" class="view-on-map">View on map</a>
+											<span class="phone-number">(123) 456-78910</span>
+											<a href="dealer-details.html" class="details-link">View details</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a href="dealer-details.html" class="item-link">
+										<span class="overlay">Overlay</span>
+										<img src="images/default_thumb_140_105.jpg" alt="Picture" />
+									</a>
+									<div class="text-content">
+										<div class="layer-one">
+											<h3><a href="dealer-details.html">Dealer Name Here</a></h3>
+											<span class="amount">183 Offers</span>
+										</div>
+										<ul class="item-specs layer-two">
+											<li>314 Columbus Ave, San Francisco, CA 94133</li>
+										</ul>
+										<div class="layer-three">
+											<a href="#" class="view-on-map">View on map</a>
+											<span class="phone-number">(123) 456-78910</span>
+											<a href="dealer-details.html" class="details-link">View details</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a href="dealer-details.html" class="item-link">
+										<span class="overlay">Overlay</span>
+										<img src="images/default_thumb_140_105.jpg" alt="Picture" />
+									</a>
+									<div class="text-content">
+										<div class="layer-one">
+											<h3><a href="dealer-details.html">Dealer Name Here</a></h3>
+											<span class="amount">183 Offers</span>
+										</div>
+										<ul class="item-specs layer-two">
+											<li>314 Columbus Ave, San Francisco, CA 94133</li>
+										</ul>
+										<div class="layer-three">
+											<a href="#" class="view-on-map">View on map</a>
+											<span class="phone-number">(123) 456-78910</span>
+											<a href="dealer-details.html" class="details-link">View details</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a href="dealer-details.html" class="item-link">
+										<span class="overlay">Overlay</span>
+										<img src="images/default_thumb_140_105.jpg" alt="Picture" />
+									</a>
+									<div class="text-content">
+										<div class="layer-one">
+											<h3><a href="dealer-details.html">Dealer Name Here</a></h3>
+											<span class="amount">183 Offers</span>
+										</div>
+										<ul class="item-specs layer-two">
+											<li>314 Columbus Ave, San Francisco, CA 94133</li>
+										</ul>
+										<div class="layer-three">
+											<a href="#" class="view-on-map">View on map</a>
+											<span class="phone-number">(123) 456-78910</span>
+											<a href="dealer-details.html" class="details-link">View details</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a href="dealer-details.html" class="item-link">
+										<span class="overlay">Overlay</span>
+										<img src="images/default_thumb_140_105.jpg" alt="Picture" />
+									</a>
+									<div class="text-content">
+										<div class="layer-one">
+											<h3><a href="dealer-details.html">Dealer Name Here</a></h3>
+											<span class="amount">183 Offers</span>
+										</div>
+										<ul class="item-specs layer-two">
+											<li>314 Columbus Ave, San Francisco, CA 94133</li>
+										</ul>
+										<div class="layer-three">
+											<a href="#" class="view-on-map">View on map</a>
+											<span class="phone-number">(123) 456-78910</span>
+											<a href="dealer-details.html" class="details-link">View details</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a href="dealer-details.html" class="item-link">
+										<span class="overlay">Overlay</span>
+										<img src="images/default_thumb_140_105.jpg" alt="Picture" />
+									</a>
+									<div class="text-content">
+										<div class="layer-one">
+											<h3><a href="dealer-details.html">Dealer Name Here</a></h3>
+											<span class="amount">183 Offers</span>
+										</div>
+										<ul class="item-specs layer-two">
+											<li>314 Columbus Ave, San Francisco, CA 94133</li>
+										</ul>
+										<div class="layer-three">
+											<a href="#" class="view-on-map">View on map</a>
+											<span class="phone-number">(123) 456-78910</span>
+											<a href="dealer-details.html" class="details-link">View details</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a href="dealer-details.html" class="item-link">
+										<span class="overlay">Overlay</span>
+										<img src="images/default_thumb_140_105.jpg" alt="Picture" />
+									</a>
+									<div class="text-content">
+										<div class="layer-one">
+											<h3><a href="dealer-details.html">Dealer Name Here</a></h3>
+											<span class="amount">183 Offers</span>
+										</div>
+										<ul class="item-specs layer-two">
+											<li>314 Columbus Ave, San Francisco, CA 94133</li>
+										</ul>
+										<div class="layer-three">
+											<a href="#" class="view-on-map">View on map</a>
+											<span class="phone-number">(123) 456-78910</span>
+											<a href="dealer-details.html" class="details-link">View details</a>
+										</div>
+									</div>
+								</li>
+								
+								
+							</ul>
+							
+						</div>
+					
+					</div><!--.layer-two-->
+				
+					<div class="layer-three">
+						<div class="pagination">
+							<a href="#" class="current-item"><span>1</span></a>
+							<a href="#"><span>2</span></a>
+							<a href="#"><span>3</span></a>
+							<span class="space-between">...</span>
+							<a href="#"><span>8</span></a>
+							<a href="#" class="next-button">Next</a>
+						</div>											
+					</div>
+				</div>
+			
+		
+			</div>
+		</div>
+	</section><!--#search-list-->
+	
+</div><!--#page-content-->
+	
+<footer>
+		<div class="layer-one">
+			<div class="content-holder">
+				<nav>
+							<ul>
+								<li><a href="./Registerl">Add an offer</a></li>
+								<li><a href="log-in.html">Register dealer</a></li>
+								<li><a href="log-in.html">Login Dealer</a></li>
+							</ul>
+				</nav>		
+</footer>
+
+</body>
+</html>

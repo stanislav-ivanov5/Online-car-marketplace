@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js ie6 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js ie7 lt-ie8 lt-ie9"> <![endif]-->
+<!--[if IE 8]> <html class="no-js ie8 lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Mobile - Log In</title>
+<meta name="description" content="Automarket">
+
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/uniform.default.css">
+<link rel="stylesheet" href="css/prettyPhoto.css">
+<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+<script src="js/vendor/jquery-1.8.2.min.js"></script>
+<script src="js/vendor/selectivizr.js"></script>
+<script src="js/vendor/PIE.js"></script>
+<script src="js/plugins/jquery.placeholder.min.js"></script>
+<script src="js/plugins/jquery.uniform.min.js"></script>
+<script src="js/plugins/jquery.flexslider-min.js"></script>
+<script src="js/plugins/jquery.carouFredSel-6.1.0-packed.js"></script>
+<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script src="js/plugins/jquery.prettyPhoto.js"></script>
+<script src="js/plugins/jquery.countdown.js"></script>
+
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+</head>
+<body>
+	<!--[if lt IE 7]>
+<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+<![endif]-->
+	<header>
+		<div class="content-holder">
+			<div class="layer-one">
+				<div class="sub-title">
+					<h1>
+						<a href="index.html">Mobile</a>
+					</h1>
+					<p class="sub-title">Car marketplace</p>
+				</div>
+
+	
+				<div class="dealer-login">
+					<a href="dealer-details.html" class="dealer-name">Dealer Name</a> <a
+						href="#" class="sign-out">Sign Out</a>
+				</div>
+
+				<div class="header-buttons">
+					<a href="add-vehicle.html" class="add-an-offer rounded-link-box"><span
+						class="box-content"><strong class="plus-sign">+</strong>&nbsp;Add
+							An Offer</span></a>
+
+				</div>
+			</div>
+			<!--.layer-one-->
+
+			<div class="layer-two">
+				<nav>
+					<ul>
+						<li class="nav-cars current-item"><a href="car-list.html">Cars</a></li>
+						<li class="nav-bike"><a href="#">Bikes</a></li>
+						<li class="nav-truck"><a href="#">Trucks</a></li>
+						<li class="nav-parts"><a href="#">Parts</a></li>
+					</ul>
+				</nav>
+
+				<form id="header-search" action="car-list.html" method="post">
+					<input type="text" name="quick_search"
+						onfocus="if(this.value == 'Quick Search, Ex: Mercedes-Benz E220') { this.value = ''; }"
+						onblur="if(this.value == '') { this.value = 'Quick Search, Ex: Mercedes-Benz E220'; }"
+						value="Quick Search, Ex: Mercedes-Benz E220" class="quick-search">
+					<select name="type-option">
+						<option value="cars" selected="selected">Cars</option>
+					</select>
+					<div class="search-submit">
+						<input type="submit" value="Search" />
+					</div>
+				</form>
+			</div>
+			<!--.layer-two-->
+		</div>
+	</header>
+
+	<div id="page-content">
+
+		<section id="car-pagination">
+			<div class="content-holder">
+				<div class="page-main-heading extra-space">
+					<div class="heading-location">
+						<h2>
+							<span class="bold">Member</span> registration
+						</h2>
+						<p class="page-location">
+							<a href="#">Home </a> <span class="greater-than">&gt;&gt;</span>
+							<a href="#">Vehicle Insurance</a>
+						</p>
+					</div>
+
+				</div>
+
+				<nav class="default-tabs split-tabs">
+					<ul>
+						<li class="current-item"><a href="#">Choose from below</a></li>
+					</ul>
+				</nav>
+			</div>
+		</section>
+		<!--#car-pagination -->
+
+		<section id="log-in">
+			<div class="content-holder">
+				<div class="full-width">
+					<!-- LOGIN -->
+					<div class="one-half col-539">
+						<form id="login_user" action="./Register" method="POST" class="grey-corner-box">
+							<fieldset>
+								<legend>
+									<span class="bold">Register</span> user
+								</legend>
+
+								<ul>
+									<li class="select-four">
+										<div>
+											<label for="username">User Name:</label>
+											 <input type="text"	name="username" id="username" /> 
+											 
+											<label for="email">Email:</label>
+											<input type="text" name="email" id="email" />
+											
+											 <label	for="phone">Phone:</label>
+												 <input	type="text" name="phone" id="phone" />
+												 
+												 <label	for="password">Password:</label> 
+												 <input	type="password" name="password" id="password" />
+										</div>
+
+
+									</li>
+									
+									
+									<li class="select-two">
+										<div>
+											<input type="radio" name="type" value="dealer"
+												id="dealer" /> <label for="register">Dealer<span
+												class="description">Create a dealer account</span></label>
+										</div>
+										<div>
+											<input type="radio" name="type" value="user"
+												id="user" /> <label for="add-offer">User<span class="description">Create personal account</span>
+											</label>
+										</div>
+									</li>
+									<li>
+										<div class="checkbox-custom submit-field">
+											<span class="submit">
+											<input type="submit"
+												value="Login" /></span> 
+											<input type="checkbox"
+												value="remember_me" id="remember-me" checked="checked" /> 
+												<label for="remember-me">Remember me</label>
+										</div>
+									</li>
+									
+								</ul>
+
+							</fieldset>
+						</form>
+						<!-- LOGIN -->
+					</div>
+
+					
+				</div>
+			</div>
+		</section>
+		<!--#search-list-->
+
+	</div>
+	<!--#page-content-->
+
+	<footer>
+		<div class="layer-one">
+			<div class="content-holder">
+				<nav>
+					<ul>
+						<li><a href="add-vehicle.html">Add an offer</a></li>
+						<li><a href="log-in.html">Register dealer</a></li>
+						<li><a href="log-in.html">Login Dealer</a></li>
+					</ul>
+				</nav>
+	</footer>
+
+</body>
+</html>

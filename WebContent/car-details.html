@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js ie6 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js ie7 lt-ie8 lt-ie9"> <![endif]-->
+<!--[if IE 8]> <html class="no-js ie8 lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Mobile - Car Details</title>
+	<meta name="description" content="Automarket">
+
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/uniform.default.css">
+	<link rel="stylesheet" href="css/prettyPhoto.css">
+	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+	<script src="js/vendor/jquery-1.8.2.min.js"></script>
+	<script src="js/vendor/selectivizr.js"></script>
+	<script src="js/vendor/PIE.js"></script>
+	<script src="js/plugins/jquery.placeholder.min.js"></script>
+	<script src="js/plugins/jquery.uniform.min.js"></script>
+	<script src="js/plugins/jquery.flexslider-min.js"></script>
+	<script src="js/plugins/jquery.carouFredSel-6.1.0-packed.js"></script>
+	<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+	<script src="js/plugins/jquery.prettyPhoto.js"></script>
+	<script src="js/plugins/jquery.countdown.js"></script>
+	
+	<script src="js/plugins.js"></script>
+	<script src="js/main.js"></script>
+</head>
+<body>
+<!--[if lt IE 7]>
+<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+<![endif]-->
+<header>
+	<div class="content-holder">
+		<div class="layer-one">
+			<div class="sub-title">
+				<h1><a href="index.html">Mobile</a></h1>
+				<p class="sub-title">Car marketplace</p>
+			</div>
+				
+			<div class="dealer-login">
+				<a href="dealer-details.html" class="dealer-name">Dealer Name</a>
+				<a href="#" class="sign-out">Sign Out</a>
+			</div>
+				
+			<div class="header-buttons">
+				<a href="./Register" class="add-an-offer rounded-link-box"><span class="box-content"><strong class="plus-sign">+</strong>&nbsp;Add An Offer</span></a>
+				
+			</div>
+		</div><!--.layer-one-->
+			
+		<div class="layer-two">
+			<nav>
+				<ul>
+					<li class="nav-cars current-item"><a href="car-list.html">Cars</a></li>
+					<li class="nav-bike"><a href="#">Bikes</a></li>
+					<li class="nav-truck"><a href="#">Trucks</a></li>
+					<li class="nav-parts"><a href="#">Parts</a></li>
+				</ul>
+			</nav>
+				
+			<form id="header-search" action="car-list.html" method="post">
+				<input type="text" name="quick_search" onfocus="if(this.value == 'Quick Search, Ex: Mercedes-Benz E220') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'Quick Search, Ex: Mercedes-Benz E220'; }" value="Quick Search, Ex: Mercedes-Benz E220" class="quick-search" >
+				<select name="type-option">
+					<option value="cars" selected="selected">Cars</option>
+					<option value="bikes">Bikes</option>
+					<option value="trucks">Trucks</option>
+					<option value="Parts">Parts</option>
+				</select>
+				<div class="search-submit">
+					<input type="submit" value="Search"/>
+				</div>
+			</form>
+		</div><!--.layer-two-->
+	</div>
+		
+</header>
+<div id="page-content">
+
+	<section id="car-pagination">
+		<div class="content-holder">
+			<div class="page-main-heading extra-space">
+				<div class="heading-location">
+					<h2><span class="bold">Mercedes-Benz</span> CLS 320</h2>
+					<p class="page-location">
+						<a href="index.html">Home </a>
+						<span class="greater-than">&gt;&gt;</span>
+						<a href="car-list.html">Cars</a>
+						<span class="greater-than">&gt;&gt;</span>
+						<a href="#">Mercedes-Benz</a>
+						<span class="greater-than">&gt;&gt;</span>
+						<a href="#">Mercedes-Benz CLS 320</a>
+					</p>
+				</div>
+				
+				<div class="extra-info">
+					<span>Offer ID C24021482</span>
+					<p>The offer had 1944 Views</p>
+				</div>
+			</div>
+			
+			<nav class="default-tabs split-tabs">
+				<ul id="vehicle-toggle">
+					<li id="vehicle-description" class="current-item"><a href="#"><span>Vehicle description</span></a></li>
+				</ul>
+				
+			</nav>
+			
+			
+		</div>
+	</section><!--#car-pagination -->
+		
+	<section id="car-details">
+	
+		<div class="social-icons-round">
+			<p>Share to:</p>
+			<ul>
+				<li class="facebook"><a href="#">Facebook</a></li>
+				<li class="twitter"><a href="#">Twitter</a></li>
+				<li class="google"><a href="#">Gmail</a></li>
+			</ul>
+		</div>
+		<div class="content-holder">
+			<div class="full-width google-maps dealer-maps vehicle-location">
+				<div id="map-canvas" style="width: 978px; height: 380px;"></div>
+			</div>
+		
+			<div class="full-width vehicle-description">
+			
+				<div class="car-full-image one-half col-480">
+					<div class="main-image">
+						<a href="#">
+							<img src="images/mercedes_full.jpg" alt="Full Picture" />
+							<span class="magnifying-glass">Magnifying Glass</span>
+						</a>
+					</div>
+					<ul class="images-navigation">
+						<li><a href="images/mercedes_full.jpg"><img src="images/mercedes_thumb_list_item.jpg" alt="Thumb Car" /></a></li>
+						<li><a href="images/mercedes_full1.jpg"><img src="images/mercedes_thumb_list_item1.jpg" alt="Thumb Car" /></a></li>
+						<li><a href="images/mercedes_full2.jpg"><img src="images/mercedes_thumb_list_item2.jpg" alt="Thumb Car" /></a></li>
+                        <li><a href="images/mercedes_full3.jpg"><img src="images/mercedes_thumb_list_item3.jpg" alt="Thumb Car" /></a></li>
+                        <li><a href="images/mercedes_full4.jpg"><img src="images/mercedes_thumb_list_item4.jpg" alt="Thumb Car" /></a></li>
+					</ul>
+					<div id="preloader"></div>
+				</div>
+				
+				<div class="car-full-specs one-half col-460">
+					<div class="price-car">
+						<span class="price-tag">54.980 EURO</span>
+						<span class="small-note">* Price negotiable</span>
+					</div>
+					<ul class="car-specs-list">
+						<li>
+							<span class="label">Model, Body type:</span>
+							<span class="value">Mercedes-Benz CLS 320, Coupe</span>
+						</li>
+						<li>
+							<span class="label">Fabrication:</span>
+							<span class="value">2010</span>
+						</li>
+						<li>
+							<span class="label">Fuel:</span>
+							<span class="value">Diesel</span>
+						</li>
+						<li>
+							<span class="label">Engine:</span>
+							<span class="value">3200 cm³ (373 kW / 507 CP)</span>
+						</li>
+						<li>
+							<span class="label">Transmision:</span>
+							<span class="value">Automatic</span>
+						</li>
+						<li>
+							<span class="label">Color:</span>
+							<span class="value">Black</span>
+						</li>
+						<li>
+							<span class="label">Doors:</span>
+							<span class="value">4/5</span>
+						</li>
+						<li>
+							<span class="label">CO2-Emissions combined:</span>
+							<span class="value">ca 423 g/km</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="full-width grey-border-bottom">
+				<div class="one-half standard-text-content col-701">
+				
+					<h3><span class="bold">Vehicle</span> information</h3>
+					<ul>
+						<li><strong>Features: </strong>alloy wheels, xenon headlights, fog lights, tinted glass</li>
+						<li><strong>Other parameters: </strong>service book</li>
+						<li><strong>Safety: </strong>ABS, traction control, alarm, airbags, immobilizer, anti-theft, ESP, EDS, protection framework</li>
+						<li><strong>Comfort: </strong>electric windows, electric mirrors, air conditioning, leather upholstery, navigation system, central locking, radio / CD, power steering, 
+						onboard computer, cruise control, heated seats, rain sensor, steering wheel controls, parking sensors</li>
+					</ul>
+				
+					<hr />
+
+					<h3><span class="bold">More</span> info</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet fringilla metus, a ultricies ligula consequat at. 
+					Maecenas eget massa at eros ornare rhoncus. In sit amet enim risus, in mattis felis. Donec lorem arcu, tempor quis fermentum et, viverra in turpis. 
+					Nam non nunc vitae justo tincidunt lobortis eu sit amet dui. Nam ut dui aliquet nisl fermentum mollis sit amet eget lectus. 
+					Vivamus iaculis massa sit amet velit convallis aliquam. Vestibulum dolor erat, congue nec viverra eget, aliquet sit amet nunc. Donec vitae arcu orci.</p>
+					<!--<br />
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet fringilla metus, a ultricies ligula consequat at. 
+					Maecenas eget massa at eros ornare rhoncus. In sit amet enim risus, in mattis felis. Donec lorem arcu, tempor quis fermentum et, viverra in turpis. 
+					Nam non nunc vitae justo tincidunt lobortis eu sit amet dui. Nam ut dui aliquet nisl fermentum mollis sit amet eget lectus. 
+					Vivamus iaculis massa sit amet velit convallis aliquam. Vestibulum dolor erat, congue nec viverra eget, aliquet sit amet nunc. Donec vitae arcu orci.</p>-->
+					
+					<hr />
+					
+					<h3><span class="bold">Contact</span> details</h3>
+					<p class="heading-note">AutoMarket does not store additional information about the seller except for those contained in the announcement.</p>
+					<br />
+					<ul class="icon-list">
+						<li class="phone">0040 742 016 756</li>
+						<li class="address">Berlin, Germany, nr. 250330, main street</li>
+					</ul>
+				</div>
+				
+				
+				
+				
+			</div>
+			
+			
+		</div><!--.content-holder-->
+	</section><!--#search-list-->
+	
+</div><!--#page-content-->
+	
+<footer>
+		<div class="layer-one">
+			<div class="content-holder">
+				<nav>
+							<ul>
+								<li><a href="./Register">Add an offer</a></li>
+								<li><a href="log-in.html">Register dealer</a></li>
+								<li><a href="log-in.html">Login Dealer</a></li>
+							</ul>
+				</nav>		
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js ie6 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js ie7 lt-ie8 lt-ie9"> <![endif]-->
+<!--[if IE 8]> <html class="no-js ie8 lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Mobile - Add Vehicle</title>
+<meta name="description" content="Automarket">
+
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/uniform.default.css">
+<link rel="stylesheet" href="css/prettyPhoto.css">
+<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+<script src="js/vendor/jquery-1.8.2.min.js"></script>
+<script src="js/vendor/selectivizr.js"></script>
+<script src="js/vendor/PIE.js"></script>
+<script src="js/plugins/jquery.placeholder.min.js"></script>
+<script src="js/plugins/jquery.uniform.min.js"></script>
+<script src="js/plugins/jquery.flexslider-min.js"></script>
+<script src="js/plugins/jquery.carouFredSel-6.1.0-packed.js"></script>
+<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script src="js/plugins/jquery.prettyPhoto.js"></script>
+<script src="js/plugins/jquery.countdown.js"></script>
+
+
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+
+</head>
+<body>
+	<!--[if lt IE 7]>
+<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+<![endif]-->
+	<header>
+		<div class="content-holder">
+			<div class="layer-one">
+				<div class="sub-title">
+					<h1>
+						<a href="index.html">Mobile</a>
+					</h1>
+					<p class="sub-title">Car marketplace</p>
+				</div>
+
+				<div class="dealer-login">
+					<a href="dealer-details.html" class="dealer-name">Dealer Name</a> <a
+						href="#" class="sign-out">Sign Out</a>
+				</div>
+
+				<div class="header-buttons">
+					<a href="add-vehicle.html" class="add-an-offer rounded-link-box"><span
+						class="box-content"><strong class="plus-sign">+</strong>&nbsp;Add
+							An Offer</span></a>
+
+				</div>
+			</div>
+			<!--.layer-one-->
+
+			<div class="layer-two">
+				<nav>
+					<ul>
+						<li class="nav-cars current-item"><a href="car-list.html">Cars</a></li>
+						<li class="nav-bike"><a href="#">Bikes</a></li>
+						<li class="nav-truck"><a href="#">Trucks</a></li>
+						<li class="nav-parts"><a href="#">Parts</a></li>
+					</ul>
+				</nav>
+
+				<form id="header-search" action="car-list.html" method="post">
+					<input type="text" name="quick_search"
+						onfocus="if(this.value == 'Quick Search, Ex: Mercedes-Benz E220') { this.value = ''; }"
+						onblur="if(this.value == '') { this.value = 'Quick Search, Ex: Mercedes-Benz E220'; }"
+						value="Quick Search, Ex: Mercedes-Benz E220" class="quick-search">
+					<select name="type-option">
+						<option value="cars" selected="selected">Cars</option>
+						<option value="bikes">Bikes</option>
+						<option value="trucks">Trucks</option>
+						<option value="parts">Parts</option>
+					</select>
+					<div class="search-submit">
+						<input type="submit" value="Search" />
+					</div>
+				</form>
+			</div>
+			<!--.layer-two-->
+		</div>
+
+	</header>
+
+	<div id="page-content">
+
+		<section id="car-pagination">
+			<div class="content-holder">
+				<div class="page-main-heading extra-space">
+					<div class="heading-location">
+						<h2>
+							<span class="bold">Sell your vehicle</span>
+						</h2>
+						<p class="page-location">
+							<a href="index.html">Home </a> <span class="greater-than">&gt;&gt;</span>
+							<a href="#">Add an offer</a>
+						</p>
+					</div>
+				</div>
+
+				<nav class="default-tabs split-tabs">
+					<ul>
+						<li class="current-item"><a href="#"><span>1. New
+									offer</span></a></li>
+					</ul>
+				</nav>
+
+			</div>
+		</section>
+		<!--#car-pagination -->
+
+		<section id="sell-your-vehicle">
+			<div class="content-holder">
+				<div class="full-width light-grey-corner-box box-text-default">
+					<h3>
+						Sell ​​your car on <strong>Mobile </strong>
+					</h3>
+					<p>Required fields are marked with *</p>
+					<p>If you are a dealer, please visit the dealers section</p>
+				</div>
+
+				<div class="full-width sell-form <!--options-form-->">
+					<form action="./Offer" method="POST">
+						<fieldset id="vehicle-data"> <legend>
+							<span class="bold">Vehicle</span> data
+						</legend>
+						<ul class="field-content">
+							<li class="select-four">
+								<div>
+									<label for="select-manufacturer">Manufacturer: <span
+										class="mandatory">*</span></label> 
+										<select name="marka" id="select-manufacturer">
+										<option selected="selected">Select</option>
+										<option value="Audi">Audi</option>
+										<option value="BMW">BMW</option>
+										<option value="Citroen">Citroen</option>
+										<option value="Honda">Honda</option>
+										<option value="Lada">Lada</option>
+										<option value="Mercedes">Mercedes</option>
+										<option value="Peugeot">Peugeot</option>
+										<option value="VW">VW</option>
+									</select>
+								</div>
+								<div>
+									<label for="select-model">Model: <span
+										class="mandatory">*</span></label> 
+										<select name="model" id="select-model">
+										<option selected="selected">Select</option>
+										<option value="A1">A1</option>
+										<option value="A2">A2</option>
+										<option value="A3">A3</option>
+										<option value="3-series">3 Series</option>
+										<option value="C3">C3</option>
+										<option value="Accord">Accord</option>
+										<option value="Samara">Samara</option>
+										<option value="A150">A150</option>
+										<option value="Peugeout">205</option>
+										<option value="Polo">Polo</option>
+									</select>
+								</div>
+								<div>
+									<label for="select-fabrication">Fabrication: <span
+										class="mandatory">*</span></label> <select name="year" id="select-fabrication">
+										<option selected="selected">Select</option>
+										<option value="2016">2016</option>
+										<option value="2015">2015</option>
+										<option value="2014">2014</option>
+										<option value="2013">2013</option>
+										<option value="2012">2012</option>
+										<option value="2011">2011</option>
+										<option value="2010">2010</option>
+										<option value="2009">2009</option>
+										<option value="2008">2008</option>
+										<option value="2007">2007</option>
+										<option value="2006">2006</option>
+										<option value="2005">2005</option>
+										<option value="2004">2004</option>
+										<option value="2003">2003</option>
+										<option value="2002">2002</option>
+										<option value="2001">2001</option>
+										<option value="2000">2000</option>
+									</select>
+								</div>
+								<div>
+									<label for="select-body-type">Body Type: <span
+										class="mandatory">*</span></label> <select id="select-body-type">
+										<option selected="selected">Select</option>
+										<option value="Sedann">Sedan</option>
+										<option value="Coupe">Coupe</option>
+										<option value="Estate">Estate</option>
+										<option value="Cabrio">Cabrio</option>
+									</select>
+								</div>
+							</li>
+
+							<li class="select-four">
+								<div>
+									<label for="select-fuel-type">Fuel Type: <span
+										class="mandatory">*</span></label> <select id="select-fuel-type">
+										<option selected="selected">Select</option>
+										<option value="Gasoline">Gasoline</option>
+										<option value="Diesel">Diesel</option>
+										<option value="Electric">Electric</option>
+									</select>
+								</div>
+								<div>
+									<label for="select-transmission">Transmission: <span
+										class="mandatory">*</span></label> <select id="select-transmission">
+										<option selected="selected">Select</option>
+										<option value="Manual">Manual</option>
+										<option value="Automatic">Automatic</option>
+										<option value="Semi-automatic">Semi-automatic</option>
+									</select>
+								</div>
+								<div>
+									<label for="select-doors">Doors: <span
+										class="mandatory">*</span></label> <select id="select-doors">
+										<option selected="selected">Select</option>
+										<option value="2">2</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+									</select>
+								</div>
+								<div>
+									<label for="select-cilindrics">Cilindrics (in cm³): <span
+										class="mandatory">*</span></label> <input type="text" name="selected"
+										id="input-cilindrics" class="default-input" />
+								</div>
+							</li>
+							<!-- line #2 -->
+
+							<li class="select-four">
+								<div>
+									<label for="select-hp-kw">Hp / Kw: <span
+										class="mandatory">*</span></label> <input type="text" name="selected"
+										id="input-hp-kw" class="default-input" />
+								</div>
+								<div class="two-fourth">
+									<label for="input-chassis">VIN / chassis number: <span
+										class="mandatory">*</span></label> <input type="text"
+										name="chassis_number" id="input-chassis" class="default-input" />
+								</div>
+								<div>
+									<label for="select-color">Color: <span
+										class="mandatory">*</span></label> <select id="select-color">
+										<option selected="selected">Select</option>
+										<option value="White">White</option>
+										<option value="Black">Black</option>
+										<option value="Blue">Blue</option>
+										<option value="Red">Red</option>
+										<option value="Green">Green</option>
+									</select>
+								</div>
+							</li>
+							<!-- line #3 -->
+						</ul>
+						</fieldset>
+
+						<fieldset id="vehicle-equipment" class="checkbox-selection">
+							<legend>
+								<span class="bold">Vehicle</span> equipment
+							</legend>
+							<ul class="field-content">
+								<li><input type="checkbox" value="checkbox_abs"
+									id="check-abs" /><label for="check-abs">ABS</label></li>
+								<li><input type="checkbox" value="checkbox_eds"
+									id="check-eds" /><label for="check-eds">EDS</label></li>
+								<li><input type="checkbox" value="checkbox_esp"
+									id="check-esp" /><label for="check-esp">ESP</label></li>
+								<li><input type="checkbox"
+									value="checkbox_air_conditioning" id="check-air-conditioning" /><label
+									for="check-air-conditioning">Air conditioning</label></li>
+								<li><input type="checkbox" value="checkbox_airbag"
+									id="check-airbag" /><label for="check-airbag">Winter
+										tires</label></li>
+								<li><input type="checkbox" value="checkbox_alarm"
+									id="check-alarm" /><label for="check-alarm">Electric
+										windows</label></li>
+								<li><input type="checkbox" value="checkbox_panoramic_roof"
+									id="check-panoramic-roof" /><label for="check-panoramic-roof">Panoramic
+										roof</label></li>
+								<li><input type="checkbox"
+									value="checkbox_protection_framework"
+									id="check-protection-framework" /><label
+									for="check-protection-framework">Protection framework</label></li>
+								<li><input type="checkbox" value="checkbox_tow"
+									id="checkbox-tow" /><label for="checkbox-tow">Tow</label></li>
+								<li><input type="checkbox"
+									value="checkbox_traction_control"
+									id="checkbox-traction-control" /><label
+									for="checkbox-traction-control">Traction control</label></li>
+								<li><input type="checkbox" value="checkbox_board_computer"
+									id="checkbox-board-computer" /><label
+									for="checkbox-board-computer">Board computer</label></li>
+								<li><input type="checkbox" value="checkbox_steering_wheel"
+									id="checkbox-steering-wheel" /><label
+									for="checkbox-steering-wheel">Steering wheel controls</label></li>
+							</ul>
+
+						</fieldset>
+
+						<fieldset id="vehicle-description">
+							<legend>
+								<span class="bold">Vehicle</span> description
+							</legend>
+							<div class="field-content">
+								<textarea id="vehicle-description-field" name="description"
+									class="description"></textarea>
+							</div>
+						</fieldset>
+
+						<fieldset id="vehicle-condition">
+							<legend>
+								<span class="bold">Vehicle</span> condition
+							</legend>
+							<ul class="field-content">
+								<li class="select-four">
+									<div>
+										<label for="select-country-origin">City: <span
+											class="mandatory">*</span></label> <select name="city" id="select-country-origin">
+											<option selected="selected">Select</option>
+											<option value="sofia">Sofia</option>
+											<option value="plovdiv">Plovdiv</option>
+											<option value="burgas">Burgas</option>
+											<option value="varna">Varna</option>
+											<option value="ruse">Ruse</option>
+											<option value="stara_zagora">Stara Zagora</option>
+											<option value="pleven">Pleven</option>
+											<option value="veliko_tarnovo">Veliko Tarnovo</option>
+										</select>
+									</div>
+
+									<div>
+										<label for="select-technical-condition">Technical
+											condition: <span class="mandatory">*</span>
+										</label> <select id="select-technical-condition">
+											<option selected="selected">Select</option>
+											<option value="New">New</option>
+											<option value="Used">Used</option>
+										</select>
+									</div>
+									<div>
+										<label for="input-kilometers">Kilometers: <span
+											class="mandatory">*</span></label> <input type="text"
+											name="chassis_number" id="input-kilometers"
+											class="default-input" />
+									</div>
+									<div>
+										<label for="select-euro-type">Euro type:</label> <select
+											id="select-euro-type">
+											<option selected="selected">Select</option>
+											<option value="option1">EURO 4</option>
+											<option value="option2">EURO 5</option>
+											<option value="option3">EURO 6</option>
+										</select>
+									</div>
+								</li>
+							</ul>
+						</fieldset>
+
+						<fieldset id="vehicle-price">
+							<legend>
+								<span class="bold">Vehicle</span> price
+							</legend>
+							<ul class="field-content">
+								<li class="select-four">
+									<div>
+										<label for="input-price">Price: <span
+											class="mandatory">*</span></label> <input name="price" type="text"
+											name="chassis_number" id="input-price" class="default-input" />
+									</div>
+								</li>
+							</ul>
+						</fieldset>
+
+						<fieldset id="vehicle-photos">
+							<legend>
+								<span class="bold">Vehicle</span> photos
+							</legend>
+							<ul class="field-content">
+								<li class="select-six">
+									<div class="upload-file-container">
+										<span> <input type="file" name="files[]" />
+										</span>
+									</div>
+									<div class="upload-file-container">
+										<span> <input type="file" name="files[]" />
+										</span>
+									</div>
+									<div class="upload-file-container">
+										<span> <input type="file" name="files[]" />
+										</span>
+									</div>
+									<div class="upload-file-container">
+										<span> <input type="file" name="files[]" />
+										</span>
+									</div>
+									<div class="upload-file-container">
+										<span> <input type="file" name="files[]" />
+										</span>
+									</div>
+									<div class="upload-file-container">
+										<span> <input type="file" name="files[]" />
+										</span>
+									</div>
+								</li>
+							</ul>
+						</fieldset>
+
+
+
+						<fieldset id="vehicle-submit" class="checkbox-selection">
+							<div>
+								<div class="submit-vehicle default-submit">
+									<input type="submit" value="submit" />
+								</div>
+							</div>
+
+						</fieldset>
+					</form>
+				</div>
+
+			</div>
+		</section>
+
+	</div>
+	<!--#page-content-->
+
+	<footer>
+		<div class="layer-one">
+			<div class="content-holder">
+				<nav>
+					<ul>
+						<li><a href="add-vehicle.html">Add an offer</a></li>
+						<li><a href="log-in.html">Register dealer</a></li>
+						<li><a href="log-in.html">Login Dealer</a></li>
+					</ul>
+				</nav>
+	</footer>
+
+</body>
+</html>
